@@ -1,0 +1,21 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../">ZaTaJaWe BugTracker</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+
+            <form action="/logout" mthod="get" class="navbar-form navbar-right">
+                <span style="color:gray;vertical-align: middle;margin: 0;">Logged in as: <span style="margin: 0;color:green; vertical-align: middle"> {{ user.user_name }}</span>
+                    <button type="link" class="btn btn-link">Logout</button>
+                </span>
+            </form>
+        </div><!--/.navbar-collapse -->
+    </div>
+</nav>

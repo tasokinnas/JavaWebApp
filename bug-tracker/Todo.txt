@@ -1,0 +1,16 @@
+1 - (Partially Finished) - Add logic to update an existing bug, this will require a form to be added to the buginfo page.  Users can add new bugs to the system, and edit the title and details of existing bugs.
+
+2 - (Finished) - Users can search for bugs with text strings.
+
+3 - (Finished) - Users need to be able to create accounts and to log in
+
+4 - (Not Started) - Bugs can have comments.
+
+5 - (Partially Finished) -  Users can browse bugs by status, tag, assignee, or creator. Lists should generally be sorted by age, with the newest (or most recently updated) bugs first.
+
+6 - (Partially Finished) - Users can easily browse the bugs that they created, and the bugs that are assigned to them; they should be able to see open bugs, closed bugs, or all bugs.
+
+7 - (Finished) - Each user has a profile page that displays some information about them
+
+8 - (Partially Finished) - Milestones: Milestones can be added and viewed, but not modified
+9 - (Partially Finished) - Subscribing to tags.  Tags are created with bugs. Tags can now be subscribed to and displayed.

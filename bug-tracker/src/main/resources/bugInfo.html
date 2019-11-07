@@ -1,0 +1,48 @@
+{% include "header.html" %}
+<div class="logout">
+    {% include "logout.html" %}
+</div>
+<div class="nav">
+    {% include "nav.html" %}
+</div>
+<div class="jumbotron">
+    <div class="container">
+        <div class="bugInfo">
+            <h2>{{ bug.title }}</h2>
+            <p> id : {{bug.id }} </p>
+            <p> title : {{bug.title }} </p>
+            <p> body : {{bug.body }} </p>
+            <p> status : {{bug.status }} </p>
+            <p> create_date : {{bug.create_date }} </p>
+            <p> close_date : {{bug.close_date }} </p>
+            <p> user_id : {{bug.user_id }} </p>
+            <p> milestone_id : {{bug.milestone_id }} </p>
+            <h2>Tags</h2>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Tag</th>
+                    <th>Subscribe</th>
+                </tr>
+                </thead>
+                <tbody>
+                    {% for tag in bug.tagList %}
+                <tr>
+                    <td> {{tag}}</td>
+                        <td>
+                            {% if tag != "" %}
+                            <form class="form-horizontal" action="/subscribetag" method="POST">
+                                <input type="hidden" name="tag_name" value="{{tag}}">
+                                <button type="submit" class="btn btn-primary">Subscribe</button>
+                            </form>
+                            {% endif %}
+                        </td>
+                </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+{% include "footer.html" %}

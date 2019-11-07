@@ -1,0 +1,25 @@
+<div class="jumbotron">
+    <div class="container">
+        <form action="/createbug" method="POST">
+                       <div class="form-group">
+                            <label class="control-label col-sm-2">Title:</label>
+                            <input name="bug_title" type="text" width="50">
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2">Body:</label>
+                            <input name="bug_body" type="text" width="50">
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2">Status:</label>
+                            <!--Todo: Change to selection list-->
+                            <input name="bug_status" type="text" width="50">
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2">Tags:</label>
+                            <!--Todo: Change to selection list-->
+                            <input name="bug_tags" type="text" width="50">
+                        </div>
+                        <button type="submit">Create Bug</button>
+            </form>
+    </div>
+</div>

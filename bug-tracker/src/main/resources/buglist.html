@@ -1,0 +1,44 @@
+{% include "header.html" %}
+<div class="logout">
+    {% include "logout.html" %}
+</div>
+<div class="nav">
+    {% include "nav.html" %}
+</div>
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron">
+    <div class="container">
+        <p><a class="btn btn-default" href="/registerbug" role="button">Add Bug&raquo;</a></p>
+        <form class="form-horizontal" action="/searchbug" method="GET">
+            <div class="form-group">
+
+                    <label class="control-label col-sm-2">Search:</label>
+                    <input name="searchterm" type="text" width="50">
+                    <button type="submit">Search</button>
+            </div>
+        </form>
+        <br>
+        <h2>Bugs List</h2>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Bug Name</th>
+                <th>Status</th>
+                <th>Created On</th>
+                <th>Tags</th>
+            </tr>
+            </thead>
+            <tbody>
+                {% for bug in bugs %}
+            <tr>
+                <td><a href="/bugs/{{ bug.id }}">{{ bug.title }}</a></td>
+                <td> {{ bug.status }} </td>
+                <td> {{ bug.createdate }}</td>
+                <td> {{ bug.tags }} </td>
+            </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% include "footer.html" %}

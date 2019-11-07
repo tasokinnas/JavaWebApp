@@ -1,0 +1,26 @@
+{% include "header.html" %}
+
+{% if user != null %}
+
+<div class="logout">
+    {% include "logout.html" %}
+</div>
+<div class="nav">
+    {% include "nav.html" %}
+</div>
+<div class="home">
+    {% include "home.html" %}
+</div>
+
+{% else %}
+
+<div class="login">
+    {% include "login.html" %}
+</div>
+<div class="main">
+    {% include "main.html" %}
+</div>
+
+{% endif %}
+
+{% include "footer.html" %}

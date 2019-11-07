@@ -1,0 +1,49 @@
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron">
+    <div class="container">
+        <p>Welcome back, {{ user.display_name }}! </p>
+        <div class="col-md-4">
+            <h3>Subscribed Bugs</h3>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Bug Name</th>
+                    <th>Status</th>
+                    <th>Created On</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for bug in userBugs %}
+                <tr>
+                    <td><a href="/bugs/{{ bug.id }}">{{ bug.title }}</a></td>
+                    <td> {{ bug.status }} </td>
+                    <td> {{ bug.create_date }}</td>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <div class="col-md-4 col-md-offset-1">
+            <h3>Tag Subscription Bugs</h3>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Bug Name</th>
+                    <th>Status</th>
+                    <th>Created On</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for bug in tagBugs %}
+                <tr>
+                    <td><a href="/bugs/{{ bug.id }}">{{ bug.title }}</a></td>
+                    <td> {{ bug.status }} </td>
+                    <td> {{ bug.create_date }}</td>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

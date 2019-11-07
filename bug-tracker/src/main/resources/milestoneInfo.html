@@ -1,0 +1,38 @@
+{% include "header.html" %}
+<div class="logout">
+    {% include "logout.html" %}
+</div>
+<div class="nav">
+    {% include "nav.html" %}
+</div>
+<div class="jumbotron">
+    <div class="container">
+        <div class="milestoneInfo">
+            <h2>Name: {{ milestone.milestone_name }}</h2>
+            <p> Id : {{ milestone.milestone_id }} </p>
+            <p> Description: {{ milestone.milestone_description}} </p>
+            <br/>
+            <h2>Bugs</h2>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Bug Name</th>
+                    <th>Status</th>
+                    <th>Created On</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for bug in milestone.bugs %}
+                <tr>
+                    <td><a href="/bugs/{{ bug.id }}">{{ bug.title }}</a></td>
+                    <td> {{ bug.status }} </td>
+                    <td> {{ bug.createdate }}</td>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+{% include "footer.html" %}
